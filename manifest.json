@@ -1,0 +1,20 @@
+{
+  "name": "SAFETY-CARS",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "content_scripts":[
+    {
+      "matches": [
+        "https://www.cars.com/vehicledetail/detail/*",
+        "https://www.truecar.com/prices-new/*"
+      ],
+      "js": [
+        "static/js/jquery-3.1.1.js",
+        "static/js/content.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "https://www.nhtsa.gov/webapi/api/SafetyRatings/*"
+  ]
+}
