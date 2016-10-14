@@ -30,6 +30,10 @@ else if(link.search("truecar.com/prices-new/") != -1){
     TC_brand = "toyota";
     TC_model = "scion " + TC_model;
   }
+  //special case with lexus because truecar lists name with space, NHTSA doesn't
+  else if(TC_brand.toLowerCase() == "lexus"){
+    TC_model = TC_model.replace(/\s+/g, '');
+  }
   var NHTSA_json_ids = `https://www.nhtsa.gov/webapi/api/SafetyRatings/modelyear/${TC_year}/make/${TC_brand}?format=json`;///model/${model}?format=json`;
   var NHTSA_request_ids = new XMLHttpRequest();
   NHTSA_request_ids.onload = NHTSA_getIDs;
@@ -129,6 +133,7 @@ function NHTSA_getID(){
 }
 
 function NHTSA_getData(){
+  //ADD TABLE TO DIV BOX TO SHOW MULTIPLE ONES
   var NHTSA_responseObj_data = JSON.parse(this.responseText);
   var NHTSA_data = {};
   NHTSA_data["Overall Rating"] = NHTSA_responseObj_data.Results[0].OverallRating;

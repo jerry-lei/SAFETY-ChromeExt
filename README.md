@@ -5,7 +5,7 @@ Develop Chrome Extension with on individual car advertisement posts that has saf
 
 ### Current working demo:
 
-![demo1.1](static/img/demo1/demo1.png)
+![demo1.1](static/img/demo1/smarter.png)
 
 ### Team Roles:
 <table>
@@ -46,3 +46,4 @@ Develop Chrome Extension with on individual car advertisement posts that has saf
 
 - October 11-12, 2016: Initial research, request API access from cars.com/iihs.org
 - October 12, 2016: TrueCar new car posts have NHTSA safety ratings
+- October 13, 2016: New way to get individual NHTSA safety ratings (encompasses more vehicles) -- should show multiples of the same vehicle (AWD/FWD/RWD variants) in a table?
