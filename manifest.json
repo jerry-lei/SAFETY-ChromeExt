@@ -7,16 +7,17 @@
       "matches": [
         "https://www.cars.com/vehicledetail/detail/*",
         "https://www.truecar.com/prices-new/*",
-        "https://www.truecar.com/used-cars-for-sale/*"
+        "https://www.truecar.com/used-cars-for-sale/*",
+        "http://www.ebay.com/itm/*"
       ],
       "js": [
         "static/js/jquery-3.1.1.js",
-        "static/js/truecar.js",
         "static/js/content.js"
       ]
     }
   ],
   "permissions": [
-    "https://www.nhtsa.gov/webapi/api/SafetyRatings/*"
+    "https://www.nhtsa.gov/webapi/api/SafetyRatings/*",
+    "http://open.api.ebay.com/shopping*"
   ]
 }

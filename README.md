@@ -7,6 +7,7 @@ Develop Chrome Extension with on individual car advertisement posts that has saf
 
 ![demo1.1](static/img/demo/TC_new.png)
 ![demo1.2](static/img/demo/TC_used.png)
+![demo1.3](static/img/demo/Ebay.png)
 
 ### APIs:
 
@@ -18,17 +19,19 @@ Develop Chrome Extension with on individual car advertisement posts that has saf
 ### Available on:
 
 - TrueCar.com
+- eBay.com
 
 ### To do:
 
-- Figure out a way for less cluttered JS structure
+- Figure out a way for less cluttered JS structure (do it before it gets even more cluttered.)
 - TrueCar:
   - NHTSA special cases:
     - Hyundai plugin hybrid
   - Used car browsing does not require page reloading.
     - Figure out a way to reload page when advertisement is 'loaded'
 - eBay Motors:
-
+  - Better location for the data
+  - Data for truck in different order than for cars (find a way to parse by looking at values)
 
 ### Log:
 
