@@ -5,45 +5,34 @@ Develop Chrome Extension with on individual car advertisement posts that has saf
 
 ### Current working demo:
 
-![demo1.1](static/img/demo1/smarter.png)
-
-### Team Roles:
-<table>
-  <tr>
-    <th>Person</th>
-    <th>Role</th>
-    <th>Email</th>
-  </tr>
-  <tr>
-    <td>Jerry Lei</td>
-    <td>Developer</td>
-    <td>jerrylei98@gmail.com</td>
-  </tr>
-  <tr>
-    <td>Victor Wen</td>
-    <td>Advertising</td>
-    <td>vw514@stern.nyu.edu</td>
-  </tr>
-</table>
+![demo1.1](static/img/demo/TC_new.png)
+![demo1.2](static/img/demo/TC_used.png)
 
 ### APIs:
 
 - cars.com (Waiting)
 - IIHS (Waiting)
 - NHTSA - Open API
+- eBay Motors
 
 ### Available on:
 
-- TrueCar.com (new cars)
+- TrueCar.com
 
 ### To do:
 
-- Account for special cases (potential fix, grab from NHTSA without model name, just brand/MY and parse through results)
-  - Porsche model names have ' ' at the end for NHTSA query
-  - Hyundai plugin hybrid
+- Figure out a way for less cluttered JS structure
+- TrueCar:
+  - NHTSA special cases:
+    - Hyundai plugin hybrid
+  - Used car browsing does not require page reloading.
+    - Figure out a way to reload page when advertisement is 'loaded'
+- eBay Motors:
+
 
 ### Log:
 
 - October 11-12, 2016: Initial research, request API access from cars.com/iihs.org
 - October 12, 2016: TrueCar new car posts have NHTSA safety ratings
-- October 13, 2016: New way to get individual NHTSA safety ratings (encompasses more vehicles) -- should show multiples of the same vehicle (AWD/FWD/RWD variants) in a table?
+- October 13, 2016: New way to get individual NHTSA safety ratings (encompasses more vehicles)
+- October 14, 2016: TrueCar used data semi functional (page auto-reloads)

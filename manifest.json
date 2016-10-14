@@ -11,6 +11,7 @@
       ],
       "js": [
         "static/js/jquery-3.1.1.js",
+        "static/js/truecar.js",
         "static/js/content.js"
       ]
     }
