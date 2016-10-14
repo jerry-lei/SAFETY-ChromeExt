@@ -2,11 +2,28 @@
 
 var link = window.location.href;
 
+
 if(link.search("cars.com/vehicledetail/detail/") != -1){
   //returns cars.com id
   var id = link.split("/")[5];
   alert(id);
 }
+else if(link.search("truecar.com/used-cars-for-sale/listings/") != -1){
+  //turn all links to clickables?
+}
+
+else if(link.search("truecar.com/used-cars-for-sale/listing/") != -1){
+
+  var temporary_var = document.querySelectorAll('script[type="text/javascript"]');
+  temporary_var = temporary_var[temporary_var.length - 1].innerHTML.replace("window.__INITIAL_STATE__=","");
+
+  temporary_var = temporary_var.split(";window.__GS_ENV_VARS__=")[0];
+  var TC_used_data = JSON.parse(temporary_var);
+  console.log(TC_used_data['vehicle']['make']);
+
+
+}
+
 else if(link.search("truecar.com/prices-new/") != -1){
   var TC_jsonld = JSON.parse(document.querySelector('script[type="application/ld+json"]').innerHTML);
   var TC_brand = TC_jsonld[0]["brand"]["name"];

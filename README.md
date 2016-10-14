@@ -40,7 +40,7 @@ Develop Chrome Extension with on individual car advertisement posts that has saf
 
 - Account for special cases (potential fix, grab from NHTSA without model name, just brand/MY and parse through results)
   - Porsche model names have ' ' at the end for NHTSA query
-  - Honda CRV has issue
+  - Hyundai plugin hybrid
 
 ### Log:
 
