@@ -8,7 +8,7 @@ var link = window.location.href;
 if(link.search("cars.com/vehicledetail/detail/") != -1){
   //returns cars.com id
   var id = link.split("/")[5];
-  alert(id);
+  //alert(id);
 }
 
 else if(link.search("ebay.com/itm/") != -1){
@@ -115,10 +115,26 @@ function EBAY_API_request_info(){
   console.log(EBAY_responseObj_info.Item.ItemSpecifics);
   if(EBAY_responseObj_info.Item.PrimaryCategoryName.search("eBay Motors:Cars") != -1){
     //if the post is a Cars/trucks post
-    EBAY_response_make = EBAY_responseObj_info.Item.ItemSpecifics.NameValueList[1].Value[0];
-    EBAY_response_year = EBAY_responseObj_info.Item.ItemSpecifics.NameValueList[0].Value[0];
-    EBAY_response_model = EBAY_responseObj_info.Item.ItemSpecifics.NameValueList[2].Value[0];
-    EBAY_response_body = EBAY_responseObj_info.Item.ItemSpecifics.NameValueList[9].Value[0];
+    var EBAY_item_specifics = EBAY_responseObj_info.Item.ItemSpecifics.NameValueList;
+    EBAY_response_body = "NONE";
+    for(c1 = 0; c1 < EBAY_item_specifics.length; c1++){
+      if(EBAY_item_specifics[c1].Name == "Model"){
+        EBAY_response_model = EBAY_item_specifics[c1].Value[0];
+      }
+      else if(EBAY_item_specifics[c1].Name == "Year"){
+        EBAY_response_year = EBAY_item_specifics[c1].Value[0];
+      }
+      else if(EBAY_item_specifics[c1].Name == "Body Type"){
+        EBAY_response_body = EBAY_item_specifics[c1].Value[0];
+      }
+      else if(EBAY_item_specifics[c1].Name == "Make"){
+        EBAY_response_make = EBAY_item_specifics[c1].Value[0];
+      }
+      else if(EBAY_item_specifics[c1].Name == "Trim"){
+        EBAY_response_trim = EBAY_item_specifics[c1].Value[0];
+      }
+    }
+    //no clue why declaring EBAY_body as "var EBAY_body" breaks everything
     EBAY_body = "NONE";
     if(EBAY_response_body.toLowerCase().search("sedan") != -1){
       EBAY_body = "SEDAN";
